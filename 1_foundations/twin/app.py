@@ -7,9 +7,9 @@ import gradio as gr
 
 load_dotenv(override=True)
 
-MODEL_NAME = "gpt-5.4-mini"
+MODEL_NAME = "qwen3:8b"
 
-openai = OpenAI()
+openai = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
 
 system = [{"role": "system", "content": TWIN_SYSTEM_PROMPT}]
 

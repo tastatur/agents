@@ -176,6 +176,8 @@ cython_debug/
 .DS_Store
 
 1_foundations/emails.txt
+1_foundations/messages.txt
+1_foundations/twin/messages.txt
 
 2_openai/output/
 
