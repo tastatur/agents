@@ -1,10 +1,11 @@
-from agents import Agent, function_tool, ModelSettings
+from agents import Agent, function_tool, ModelSettings, OpenAIChatCompletionsModel
+from openai import AsyncOpenAI
+
 from messenger import send_email, push
 import os
 from dotenv import load_dotenv
 load_dotenv(override=True)
 
-MODEL_NAME = os.getenv("DEFAULT_MODEL_NAME", "gpt-5.4-mini")
 USE_EMAIL = os.getenv("USE_EMAIL", "true").lower() == "true"
 
 settings = ModelSettings(tool_choice="required")
@@ -28,7 +29,10 @@ def send_email_tool(subject: str, text_body: str, html_body: str) -> str:
 
 INSTRUCTIONS = """
 You are provided with a detailed report. Use your tool to send an email, converting the report into
-a clean, well presented HTML email with an appropriate subject line.
+a clean, well presented HTML email with an appropriate subject line. Important - you have to use your send_email_tool email sending tool to send an email!
 """
 
-email_agent = Agent(name="Email Agent", instructions=INSTRUCTIONS, tools=[send_email_tool], model=MODEL_NAME, model_settings=settings)
+ollama_client = AsyncOpenAI(base_url="http://localhost:11434/v1", api_key="ollama")  # api_key is required by the client, ignored by Ollama
+ollama_model = OpenAIChatCompletionsModel(model="qwen3:8b", openai_client=ollama_client)
+
+email_agent = Agent(name="Email Agent", instructions=INSTRUCTIONS, tools=[send_email_tool], model=ollama_model, model_settings=settings)

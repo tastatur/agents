@@ -1,17 +1,17 @@
+from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
-from agents import Agent
+from agents import Agent, OpenAIChatCompletionsModel
 from dotenv import load_dotenv
 import os
 
 load_dotenv(override=True)
-MODEL_NAME = os.getenv("DEFAULT_MODEL_NAME", "gpt-5.4-mini")
 
 INSTRUCTIONS = """
 You are a senior researcher tasked with writing a cohesive report for a research query.
 You will be provided with the original query, and some research.
 Generate a comprehensive report based on the research and the query.
 The final output should be in markdown format, and it should be lengthy and detailed. Aim 
-for 5-10 pages of content, at least 1000 words.
+for 1-2 pages of content, around 300-500 words, not more than 500 words.
 """
 
 
@@ -21,4 +21,7 @@ class ReportData(BaseModel):
     follow_up_questions: list[str] = Field(description="Suggested topics to research further")
 
 
-writer_agent = Agent(name="Writer Agent", instructions=INSTRUCTIONS, model=MODEL_NAME, output_type=ReportData)
+ollama_client = AsyncOpenAI(base_url="http://localhost:11434/v1", api_key="ollama")  # api_key is required by the client, ignored by Ollama
+ollama_model = OpenAIChatCompletionsModel(model="mimo-v2.6:9b", openai_client=ollama_client)
+
+writer_agent = Agent(name="Writer Agent", instructions=INSTRUCTIONS, model=ollama_model, output_type=ReportData)

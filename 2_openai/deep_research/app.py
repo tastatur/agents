@@ -1,4 +1,5 @@
 import gradio as gr
+from agents import set_tracing_disabled
 from dotenv import load_dotenv
 from research_manager import ResearchManager
 from styles import CSS, JS, EXAMPLES, HEADER_HTML
@@ -35,4 +36,5 @@ with gr.Blocks(title="Deep Research") as ui:
 
 
 if __name__ == "__main__":
+    set_tracing_disabled(True)
     ui.launch(css=CSS, js=JS, theme=gr.themes.Base())
