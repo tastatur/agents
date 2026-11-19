@@ -39,6 +39,6 @@ settings = ModelSettings(tool_choice="required")
 tools = [web_search]
 
 ollama_client = AsyncOpenAI(base_url="http://localhost:11434/v1", api_key="ollama")  # api_key is required by the client, ignored by Ollama
-ollama_model = OpenAIChatCompletionsModel(model="mimo-v2.6:9b", openai_client=ollama_client)
+ollama_model = OpenAIChatCompletionsModel(model="qwen3:8b", openai_client=ollama_client)
 
 search_agent = Agent(name="Search Agent", instructions=INSTRUCTIONS, tools=tools, model=ollama_model, model_settings=settings)

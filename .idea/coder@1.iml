@@ -3,7 +3,9 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$/3_crewai/reference/coder">
       <sourceFolder url="file://$MODULE_DIR$/3_crewai/reference/coder/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/3_crewai/reference/coder/.venv" />
     </content>
+    <orderEntry type="jdk" jdkName="~/projects/agents-udemy/3_crewai/reference/coder/.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

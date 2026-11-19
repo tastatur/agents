@@ -29,6 +29,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/debate.iml" filepath="$PROJECT_DIR$/.idea/debate.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/debate-prep-ai.iml" filepath="$PROJECT_DIR$/.idea/debate-prep-ai.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/debate@1.iml" filepath="$PROJECT_DIR$/.idea/debate@1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/debate@2.iml" filepath="$PROJECT_DIR$/.idea/debate@2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/debate_lmstudio.iml" filepath="$PROJECT_DIR$/.idea/debate_lmstudio.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/deep-research-ai-agent.iml" filepath="$PROJECT_DIR$/.idea/deep-research-ai-agent.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/deep_research.iml" filepath="$PROJECT_DIR$/.idea/deep_research.iml" />
@@ -81,6 +82,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/prism.iml" filepath="$PROJECT_DIR$/.idea/prism.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/repo-onboarding-mcp.iml" filepath="$PROJECT_DIR$/.idea/repo-onboarding-mcp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/researcher.iml" filepath="$PROJECT_DIR$/.idea/researcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/researcher@1.iml" filepath="$PROJECT_DIR$/.idea/researcher@1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/resume_match_ai.iml" filepath="$PROJECT_DIR$/.idea/resume_match_ai.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/safe-customer-support.iml" filepath="$PROJECT_DIR$/.idea/safe-customer-support.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sandbox.iml" filepath="$PROJECT_DIR$/.idea/sandbox.iml" />
